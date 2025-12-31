@@ -3,14 +3,23 @@ import { Link, NavLink } from 'react-router';
 import { FcBusinessman } from "react-icons/fc";
 
 const Navbar = () => {  
-    const navLinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/about'>About</NavLink></li>
-        <li><NavLink to='/knowledge'>Knowledge</NavLink></li>
-        <li><NavLink to='/detection'>Detection</NavLink></li>
-        <li><NavLink to='/bmi'>BMI Calc</NavLink></li>
-        <li><NavLink to='/blog'>blog</NavLink></li>
+      const linkClass = ({ isActive }) =>
+    `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
+     ${isActive
+        ? "bg-primary text-red shadow-md"
+        : "text-gray-600 hover:bg-primary/10 hover:text-primary"
+     }`;
+
+  const navLinks = (
+    <>
+      <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
+      <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
+      <li><NavLink to="/knowledge" className={linkClass}>Knowledge</NavLink></li>
+      <li><NavLink to="/detection" className={linkClass}>Detection</NavLink></li>
+      <li><NavLink to="/bmi" className={linkClass}>BMI Calc</NavLink></li>
+      <li><NavLink to="/blog" className={linkClass}>Blogs</NavLink></li>
     </>
+  )
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">

@@ -41,7 +41,7 @@ const Blogs = () => {
   };
 
   return (
-    <div style={{ background: "#f4f6f9", padding: "50px 0" }}>
+    <div style={{ background: "#e0ecfcff", padding: "50px 0" }}>
       <div style={{ width: "90%", maxWidth: "1100px", margin: "auto" }}>
         <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
           Cancer Detection & Risk Analysis Blog
