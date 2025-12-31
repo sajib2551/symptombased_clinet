@@ -7,6 +7,8 @@ import KnowledgePage from "../pages/KnowledgePage";
 import Blogs from "../pages/Blogs";
 import MainLayout from "../layout/MainLayout";
 import BMICalculator from "../pages/BMICalculator";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const AppRoutes = () => {
     return (
@@ -18,6 +20,8 @@ const AppRoutes = () => {
                 <Route path="/bmi" element={<BMICalculator/>}/>
                 <Route path="/knowledge" element={<KnowledgePage />} />
                 <Route path="/blog" element={<Blogs />} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/reg" element={<Register/>} />
             </Route>
         </Routes>
     );
